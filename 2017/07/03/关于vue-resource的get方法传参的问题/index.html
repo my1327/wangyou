@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/my1327/wangyou">
-  <title>Tag: vue.js | 忘忧的blog</title>
+  <title>关于vue-resource的get方法传参的问题 | 忘忧的blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="忘忧的blog">
-<meta property="og:url" content="https://github.com/my1327/wangyou/tags/vue-js/index.html">
+  <meta name="description" content="关于使用vue-resource中的get方法跨域传参问题使用get方法跨域传参需要对参数进行封装">
+<meta name="keywords" content="vue.js,get">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于vue-resource的get方法传参的问题">
+<meta property="og:url" content="https://github.com/my1327/wangyou/2017/07/03/关于vue-resource的get方法传参的问题/index.html">
 <meta property="og:site_name" content="忘忧的blog">
+<meta property="og:description" content="关于使用vue-resource中的get方法跨域传参问题使用get方法跨域传参需要对参数进行封装">
+<meta property="og:updated_time" content="2017-07-03T05:59:28.299Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="忘忧的blog">
+<meta name="twitter:title" content="关于vue-resource的get方法传参的问题">
+<meta name="twitter:description" content="关于使用vue-resource中的get方法跨域传参问题使用get方法跨域传参需要对参数进行封装">
   
   
     <link rel="icon" href="/favicon.png">
@@ -137,36 +142,37 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-关于vue-resource的get方法传参的问题" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/wangyou/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/wangyou/2017/07/03/关于vue-resource的get方法传参的问题/" class="archive-article-date">
-  	<time datetime="2017-07-03T05:49:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-03</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/wangyou/2017/07/03/关于vue-resource的get方法传参的问题/">关于vue-resource的get方法传参的问题</a>
+    <h1 class="article-title" itemprop="name">
+      关于vue-resource的get方法传参的问题
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/wangyou/2017/07/03/关于vue-resource的get方法传参的问题/" class="archive-article-date">
+  	<time datetime="2017-07-03T05:49:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="关于使用vue-resource中的get方法跨域传参问题"><a href="#关于使用vue-resource中的get方法跨域传参问题" class="headerlink" title="关于使用vue-resource中的get方法跨域传参问题"></a>关于使用vue-resource中的get方法跨域传参问题</h2><p>使用get方法跨域传参需要对参数进行封装<br><a id="more"></a></p>
+<h3 id="params"><a href="#params" class="headerlink" title="params"></a>params</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">methods: &#123;</div><div class="line">    get: <span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">        this.<span class="variable">$http</span>.get(<span class="string">'get.php'</span>,&#123;</div><div class="line">            params:&#123;a:1,b:2&#125;</div><div class="line">        &#125;).<span class="keyword">then</span>(<span class="keyword">function</span>(res)&#123;</div><div class="line">            alert(res.data);</div><div class="line">        &#125;,<span class="keyword">function</span>(res)&#123;</div><div class="line">            alert(res.status);</div><div class="line">        &#125;)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>更多详情: <a href="http://cn.vuejs.org/" target="_blank" rel="external">vuejs</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -182,65 +188,38 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/wangyou/2017/06/27/关于vue2-0的filter/" class="archive-article-date">
-  	<time datetime="2017-06-27T07:09:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-27</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/wangyou/2017/06/27/关于vue2-0的filter/">关于vue2.0的filter</a>
-    </h1>
+  
+    <a href="/wangyou/2017/06/27/关于vue2-0的filter/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于vue2.0的filter</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">vue.js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">filter</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">过滤器</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -263,9 +242,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/wangyou/",
